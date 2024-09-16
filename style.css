@@ -1,0 +1,218 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: pageLoad 1s ease-out;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  animation: scaleIn 0.5s ease-out 0.5s both;
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-out 1s both;
+}
+
+#todo-form {
+  display: flex;
+  margin-bottom: 30px;
+  animation: slideIn 0.5s ease-out 1.3s both;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px 0 0 10px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#todo-input:focus {
+  outline: none;
+  border-color: #7fb77e;
+  box-shadow: 0 0 10px rgba(127, 183, 126, 0.3);
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #7fb77e;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease,
+    box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: #6a9e69;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo-list li {
+  background-color: #fafafa;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#todo-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+  background-color: #ff9999;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease,
+    box-shadow 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff6666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mevcut stillerin sonuna ekleyin */
+
+.todo-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease,
+    box-shadow 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:active {
+  transform: scale(0.95);
+}
+
+.edit-input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.save-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease,
+    box-shadow 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #1e87db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:active {
+  transform: scale(0.95);
+}
